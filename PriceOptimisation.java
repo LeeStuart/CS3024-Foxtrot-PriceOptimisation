@@ -110,7 +110,7 @@ public class PriceOptimisation {
 			return "";
 		}
 	}
-	// finds mininum
+	// finds minimum
 	public static int findMinimum(int[] array) {
 		int min = 0;
 		for (int i = 1; i < array.length; i++) {
