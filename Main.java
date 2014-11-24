@@ -33,7 +33,7 @@ public class Main {
 		Person person = new Person("Charlie", 20, 182.88, 65, 'M', 3);
 		GDA gda = new GDA(person);
 		
-		System.out.println("\n" + NutritionOptimisation.compareToGDA(values, gda.getGDA(), descriptions));
+		System.out.println("\n" + NutritionOptimisation.compareToGDAWeek(values, gda.getGDA(), descriptions));
 		
 	}
 

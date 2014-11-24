@@ -1,8 +1,18 @@
+/*
+ * @author Lee
+ */
 package main;
 
+/*
+ * A class which optimises a shopping list based on price
+ */
 public class PriceOptimisation {
 	
-	// Will return the shop where your shopping list will be cheapest
+	/*
+	 *  Will return the shop where your shopping list will be cheapest.
+	 *  @param pricePerKg The price per unit of each of the food items.
+	 *  @return The value of the position of the shop in the array.
+	 */
 	public static int cheapestShop(int[][] pricePerKg) {
 		
 		// Creating an array to keep track of total price
@@ -21,7 +31,13 @@ public class PriceOptimisation {
 		return min;
 	}
 	
-	// Will return what to buy from each shop, such that you spend the absolute minimum
+	/*
+	 *  Will return what to buy from each shop, such that you spend the absolute minimum.
+	 *  @param shops A String array of the different shops
+	 *  @param names A String array of the names of foods
+	 *  @param pricePerKg The price per unit of each of the food items.
+	 *  @return The list of items to buy from each shop
+	 */
 	public static String[] minimumBudget(String[] shops, String[] names, int[][] pricePerKg) {
 		
 		// Creating a array of strings to keep track of what you'll need to buy from each shop
@@ -36,7 +52,11 @@ public class PriceOptimisation {
 		return lists;
 	}
 	
-	// Returns the total price for the shop, such that you spend the absolute minimum
+	/*
+	 *  Returns the total price for the shop, such that you spend the absolute minimum
+	 *  @param pricePerKg The price per unit of each of the food items.
+	 *  @return The total price you'll spend
+	 */
 	public static int minimumBudget(int[][] pricePerKg) {
 		int totalPrice = 0;
 		for (int i = 0; i < pricePerKg.length; i++) {
@@ -46,8 +66,14 @@ public class PriceOptimisation {
 		return totalPrice;
 	}
 	
-	// Returns a the shops you'll visit based on how many you want to visit, such that you'll
-	// pay the absolute minimum
+	/*
+	 *	Returns the shops you'll visit based on how many you want to visit, such that you'll
+	 *	pay the absolute minimum
+	 *	@param number How many shops you want to visit
+	 *	@param shops The string array of the different shops.
+	 *	@param pricePerKg The price per unit of each of the food items.
+	 *	@return The shops you'll visit based on how many you want to visit, such that you'll pay the absolute minimum
+	 */ 
 	public static String maxNumberOfShops(int number, String[] shops, int[][] pricePerKg) {
 		
 		if (number == 1) {
@@ -110,7 +136,11 @@ public class PriceOptimisation {
 			return "";
 		}
 	}
-	// finds minimum
+	/*
+	 *  Finds minimum
+	 *  @param array The array of integers that you want to find the minimum of.
+	 *  @return The minimum integer;
+	 */
 	public static int findMinimum(int[] array) {
 		int min = 0;
 		for (int i = 1; i < array.length; i++) {
@@ -121,6 +151,12 @@ public class PriceOptimisation {
 		return min;
 	}
 	
+	/*
+	 * Check if an array contains a certain value
+	 * @param array The array of integers that you want to check.
+	 * @param value The value you want to check.
+	 * @return True if it does, false if it doesn't.
+	 */
 	public static boolean contains(int[] array, int value) {
 		for (int i: array) {
 			if (i == value) {
@@ -130,6 +166,11 @@ public class PriceOptimisation {
 		return false;
 	}
 	
+	/*
+	 * To calculate the factorial
+	 * @param n The number you want to calculate the factorial of.
+	 * @return The value of the calculation.
+	 */
 	public static int factorial(int n) {
 		if (n == 1) {
 			return 1;
